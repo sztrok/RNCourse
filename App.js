@@ -1,46 +1,33 @@
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 
 export default function App() {
     return (
-        <View style={styles.container}>
-            <View>
-                <Text style={styles.dummyText}>Another text!</Text>
+        <View style={styles.appContainer}>
+            <View style={styles.inputContainer}>
+                <TextInput style={styles.textInput} placeholder="Course goal" placeholderTextColor="grey" />
+                <Button title="Add Goal"/>
             </View>
-            <Text style={{
-                margin: 10,
-                borderWidth: 2,
-                borderColor: 'gray',
-                padding: 10
-            }}> {/* dwa rodzaje ustawiania styli*/}
-                Hello World!!!!!
-            </Text>
-
-            <Button title={"BUTTON"}/>
+            <View>
+                <Text>List of goals...</Text>
+            </View>
         </View>
     );
 }
 
-//
-// const style2 = StyleSheet.create({
-//     container: {
-//         margin: 10,
-//         borderWidth: 2,
-//         borderColor:'blue',
-//         padding:10,
-//     },
-// });
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+    appContainer: {
+        padding: 50
     },
-    dummyText: {
-        margin: 10,
-        padding: 10,
-        borderWidth: 2,
-        borderColor: 'blue',
+    inputContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    textInput: {
+        marginRight: 10,
+        padding: 5,
+        borderWidth: 1,
+        borderColor: '#cccccc',
+        width: '80%'
     }
 });
