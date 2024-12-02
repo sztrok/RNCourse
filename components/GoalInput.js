@@ -13,7 +13,6 @@ function GoalInput(props) {
         setEnteredGoalText('')
     }
 
-
     return (
       <Modal visible={props.visible} animationType={"slide"} style={styles.modal}>
           <View style={styles.inputContainer}>
