@@ -11,6 +11,7 @@ export default function App() {
         setModalIsVisible(true);
     }
 
+
     function endAddGoalHandler() {
         setModalIsVisible(false);
     }
